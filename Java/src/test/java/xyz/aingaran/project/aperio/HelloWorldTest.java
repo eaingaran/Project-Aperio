@@ -20,7 +20,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  */
 @ContextConfiguration(locations="/spring/resources.xml")
 @RunWith(SpringJUnit4ClassRunner.class)
-public class HelloWorldTest implements ApplicationContextAware{
+public class HelloWorldTest implements ApplicationContextAware {
 
 	@Autowired
 	private ApplicationContext applicationContext;
