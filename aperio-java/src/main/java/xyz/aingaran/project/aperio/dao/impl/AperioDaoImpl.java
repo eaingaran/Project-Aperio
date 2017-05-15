@@ -35,6 +35,9 @@ public class AperioDaoImpl implements AperioDao {
 		this.sqlSessionFactory = sqlSessionFactory;
 	}
 
+	/**
+	 * This method inserts any list of objects provided the queryId supplied is valid.
+	 */
 	public boolean insert(String queryId, List<?> domainList) {
 		boolean isSuccess = false;
 		try {
