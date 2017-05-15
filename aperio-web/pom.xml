@@ -8,21 +8,22 @@
 		<artifactId>Aperio</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>Web</artifactId>
+	<artifactId>aperio-web</artifactId>
 	<packaging>war</packaging>
-	<name>Web Maven Webapp</name>
+	<name>Webapp</name>
 	<url>http://maven.apache.org</url>
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
+			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>xyz.aingaran.project.aperio</groupId>
-			<artifactId>Java</artifactId>
+			<artifactId>aperio-java</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
+			<type>jar</type>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/javax.servlet/servlet-api -->
 		<dependency>
@@ -33,6 +34,6 @@
 
 	</dependencies>
 	<build>
-		<finalName>Web</finalName>
+		<finalName>aperio-web</finalName>
 	</build>
 </project>
