@@ -1,7 +1,61 @@
-<!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xmlns:web="http://java.sun.com/xml/ns/javaee/we-app_2_5.xsd" version="2.5">
 
-<web-app>
-  <display-name>Archetype Created Web Application</display-name>
+  <display-name>Aperio</display-name>
+  
+  <listener>
+  	<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  
+  <listener>
+  	<listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+  </listener>
+  
+  <context-param>
+  	<param-name>contextConfigLocation</param-name>
+  	<param-value>
+  		/WEB-INF/spring/spring-resource.xml
+  		/WEB-INF/scheduler.xml
+  	</param-value>
+  </context-param>
+  
+  <filter>
+  	<filter-name>charsetEncodingFilter</filter-name>
+  	<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+  	
+  	<init-param>
+  		<param-name>encoding</param-name>
+  		<param-value>UTF-8</param-value>
+  	</init-param>
+  </filter>
+  
+  <filter-mapping>
+  	<filter-name>charsetEncodingFilter</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  <servlet>
+  	<servlet-name>aperio</servlet-name>
+        <servlet-class>
+             xyz.aingaran.project.aperio.webapp.WeAppDispatcherServlet
+        </servlet-class>
+        <init-param>
+        	<param-name>detectAllViewResolvers</param-name>
+        	<param-value>false</param-value>
+        </init-param>
+  </servlet>
+
+  <servlet-mapping>
+  	<servlet-name>aperio</servlet-name>
+  	<url-pattern>/viewStatus</url-pattern>
+  </servlet-mapping>
+  
+  <welcome-file-list>
+  	<welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+
 </web-app>
