@@ -2,8 +2,8 @@
 <web-app xmlns="http://java.sun.com/xml/ns/j2ee"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
-	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
-	xmlns:web="http://java.sun.com/xml/ns/javaee/we-app_2_5.xsd" version="2.5">
+	http://java.sun.com/xml/ns/javaee/web-app_2_4.xsd"
+	xmlns:web="http://java.sun.com/xml/ns/javaee/we-app_2_4.xsd" version="2.4">
 
   <display-name>Aperio</display-name>
   
@@ -18,8 +18,7 @@
   <context-param>
   	<param-name>contextConfigLocation</param-name>
   	<param-value>
-  		/WEB-INF/spring/spring-resource.xml
-  		/WEB-INF/scheduler.xml
+  		/WEB-INF/spring/resources.xml
   	</param-value>
   </context-param>
   
@@ -41,7 +40,7 @@
   <servlet>
   	<servlet-name>aperio</servlet-name>
         <servlet-class>
-             xyz.aingaran.project.aperio.webapp.WeAppDispatcherServlet
+             xyz.aingaran.project.aperio.webapp.WebAppDispatcherServlet
         </servlet-class>
         <init-param>
         	<param-name>detectAllViewResolvers</param-name>
