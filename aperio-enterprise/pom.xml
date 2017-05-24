@@ -43,14 +43,14 @@
   							<groupId>xyz.aingaran.project.aperio</groupId>
   							<artifactId>aperio-web</artifactId>
   							<bundleFileName>aperio-web-${project.version}</bundleFileName>
-  							<contextRoot>guardian</contextRoot>
+  							<contextRoot>aperio</contextRoot>
   						</webModule>
   					</modules>
   					<archive>
   						<manifestEntries>
   							<Implementation-Vendor>Aingaran Inc.</Implementation-Vendor>
   							<Implementation-Title>${project.name}</Implementation-Title>
-  							<Implementation-Version>${project.version</Implementation-Version>
+  							<Implementation-Version>${project.version}</Implementation-Version>
   						</manifestEntries>
   					</archive>
   				</configuration>

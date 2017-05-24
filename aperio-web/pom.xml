@@ -12,9 +12,8 @@
 	</parent>
 
 	<artifactId>aperio-web</artifactId>
-	<packaging>war</packaging>
-
 	<name>Aperio Web Application</name>
+	<packaging>war</packaging>
 
 	<dependencies>
 	
